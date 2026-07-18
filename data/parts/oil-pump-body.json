@@ -1,0 +1,48 @@
+{
+  "id": "oil-pump-body",
+  "names": {
+    "ja": "オイルポンプボディ",
+    "en": "Oil Pump Body"
+  },
+  "system": "lubrication",
+  "variants": [
+    {
+      "years": [1966, 1967],
+      "oem_numbers": ["26204-66"],
+      "notes_ja": "初期型オイルポンプボディ (Phase 1で /research-part により本編を埋める予定のプレースホルダ)"
+    },
+    {
+      "years": [1968, 1980],
+      "oem_numbers": ["26204-68", "26204-73"],
+      "notes_ja": "68年に大型化、73年に更新 (プレースホルダ / 未検証)"
+    }
+  ],
+  "history_ja": "オイルポンプボディはショベルヘッドの潤滑系統の心臓部で、フィード(供給)とスカベンジ(回収)の2ステージを1つのボディに収める設計。年式によりケーシング寸法・OEM番号が更新されている。※本文はPhase 1で /research-part により実データに置換予定。",
+  "failure_modes": [
+    {
+      "title_ja": "シャフトシール抜けによる油圧低下 (プレースホルダ)",
+      "years_affected": [1970, 1984],
+      "severity": "high",
+      "summary_ja": "経年でシャフトシールが劣化し油圧が落ちる報告が散見される。詳細な症状・原因・対策はPhase 1で調査して埋める。",
+      "sources": [
+        {
+          "url": "https://www.hdforums.com/",
+          "title": "HDForums (Phase 0 プレースホルダ / 未検証)",
+          "lang": "en",
+          "accessed": "2026-07-19"
+        }
+      ],
+      "confidence": "low"
+    }
+  ],
+  "parts_availability_ja": "リプロ品の入手先はPhase 1で調査。S&S・V-Twin MFG系のリプロが存在する可能性 (未検証)。",
+  "links": [
+    {
+      "url": "https://www.hdforums.com/",
+      "title": "HDForums (トップページ、Phase 0プレースホルダ)",
+      "lang": "en",
+      "type": "forum"
+    }
+  ],
+  "confidence": "low"
+}

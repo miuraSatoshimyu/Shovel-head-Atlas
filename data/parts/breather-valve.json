@@ -1,0 +1,48 @@
+{
+  "id": "breather-valve",
+  "names": {
+    "ja": "ブリーザーバルブ",
+    "en": "Breather Valve"
+  },
+  "system": "lubrication",
+  "variants": [
+    {
+      "years": [1966, 1977],
+      "oem_numbers": ["25320-66"],
+      "notes_ja": "前期型ブリーザーバルブ (プレースホルダ / 未検証)"
+    },
+    {
+      "years": [1978, 1984],
+      "oem_numbers": ["25320-78"],
+      "notes_ja": "後期型ブリーザーバルブ (プレースホルダ / 未検証)"
+    }
+  ],
+  "history_ja": "クランクケース内圧を排気タイミングと同期して逃がすロータリー式ブリーザーバルブ。年式で開閉タイミングが変更されている ※プレースホルダ、Phase 1で調査。",
+  "failure_modes": [
+    {
+      "title_ja": "タイミングずれによる過大なクランクケース内圧 (プレースホルダ)",
+      "years_affected": [1966, 1984],
+      "severity": "medium",
+      "summary_ja": "組み付けタイミングがずれるとクランクケース内圧が抜けず、オイル漏れやブリーザーからのオイル吹き返しが起きる報告あり。詳細はPhase 1で埋める。",
+      "sources": [
+        {
+          "url": "https://xlforum.net/",
+          "title": "XLForum (Phase 0 プレースホルダ / 未検証)",
+          "lang": "en",
+          "accessed": "2026-07-19"
+        }
+      ],
+      "confidence": "low"
+    }
+  ],
+  "parts_availability_ja": "純正およびリプロで入手可能な想定 (未検証、Phase 1で確認)。",
+  "links": [
+    {
+      "url": "https://xlforum.net/",
+      "title": "XLForum (Phase 0プレースホルダ)",
+      "lang": "en",
+      "type": "forum"
+    }
+  ],
+  "confidence": "low"
+}

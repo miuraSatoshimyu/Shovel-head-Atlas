@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://miurasatoshimyu.github.io/Shovel-head-Atlas/data/schema/part.schema.json",
+  "title": "Shovelhead Atlas Part",
+  "description": "1966-1984 Shovelhead engine part with year-variant OEM numbers, failure modes, and source-linked knowledge.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "names",
+    "system",
+    "variants",
+    "history_ja",
+    "failure_modes",
+    "parts_availability_ja",
+    "links"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "kebab-case identifier used in URL and SVG data-part-id"
+    },
+    "names": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ja", "en"],
+      "properties": {
+        "ja": { "type": "string", "minLength": 1 },
+        "en": { "type": "string", "minLength": 1 }
+      }
+    },
+    "system": {
+      "type": "string",
+      "enum": [
+        "top-end",
+        "bottom-end",
+        "cam-drive",
+        "lubrication",
+        "carburetor",
+        "ignition"
+      ]
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/variant" }
+    },
+    "history_ja": { "type": "string" },
+    "failure_modes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/failureMode" }
+    },
+    "parts_availability_ja": { "type": "string" },
+    "links": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/link" }
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"],
+      "description": "Optional overall confidence level for this part's data"
+    }
+  },
+  "$defs": {
+    "yearRange": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "integer",
+        "minimum": 1966,
+        "maximum": 1984
+      },
+      "description": "[start_year, end_year] inclusive"
+    },
+    "variant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["years", "oem_numbers"],
+      "properties": {
+        "years": { "$ref": "#/$defs/yearRange" },
+        "oem_numbers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9A-Z][0-9A-Z\\-]*$"
+          }
+        },
+        "notes_ja": { "type": "string" }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "title", "lang", "accessed"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "title": { "type": "string", "minLength": 1 },
+        "lang": { "type": "string", "enum": ["ja", "en"] },
+        "accessed": { "type": "string", "format": "date" }
+      }
+    },
+    "failureMode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title_ja", "years_affected", "severity", "summary_ja", "sources"],
+      "properties": {
+        "title_ja": { "type": "string", "minLength": 1 },
+        "years_affected": { "$ref": "#/$defs/yearRange" },
+        "severity": { "type": "string", "enum": ["low", "medium", "high"] },
+        "summary_ja": { "type": "string", "minLength": 1 },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/source" }
+        },
+        "confidence": { "type": "string", "enum": ["low", "medium", "high"] }
+      }
+    },
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "title", "lang", "type"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "title": { "type": "string", "minLength": 1 },
+        "lang": { "type": "string", "enum": ["ja", "en"] },
+        "type": {
+          "type": "string",
+          "enum": ["forum", "blog", "catalog", "manual", "video"]
+        }
+      }
+    }
+  }
+}

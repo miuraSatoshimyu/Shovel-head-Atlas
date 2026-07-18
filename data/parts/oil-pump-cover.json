@@ -1,0 +1,43 @@
+{
+  "id": "oil-pump-cover",
+  "names": {
+    "ja": "オイルポンプカバー",
+    "en": "Oil Pump Cover"
+  },
+  "system": "lubrication",
+  "variants": [
+    {
+      "years": [1968, 1980],
+      "oem_numbers": ["26206-68"],
+      "notes_ja": "オイルポンプボディに勘合するカバー (プレースホルダ / 未検証)"
+    }
+  ],
+  "history_ja": "オイルポンプボディに勘合しフィード/スカベンジ経路を封止するカバー。年式によりガスケット形状が更新されている ※プレースホルダ、Phase 1で調査。",
+  "failure_modes": [
+    {
+      "title_ja": "ガスケット劣化によるオイル漏れ (プレースホルダ)",
+      "years_affected": [1968, 1984],
+      "severity": "medium",
+      "summary_ja": "ガスケット劣化やカバー変形でカバー面から滲みが出る報告あり。純正/リプロともに交換用ガスケットは流通。詳細はPhase 1で埋める。",
+      "sources": [
+        {
+          "url": "https://www.jockeyjournal.com/forum/",
+          "title": "Jockey Journal Forum (Phase 0 プレースホルダ / 未検証)",
+          "lang": "en",
+          "accessed": "2026-07-19"
+        }
+      ],
+      "confidence": "low"
+    }
+  ],
+  "parts_availability_ja": "純正・リプロのいずれも入手可能な想定 (未検証、Phase 1で確認)。",
+  "links": [
+    {
+      "url": "https://www.jockeyjournal.com/forum/",
+      "title": "Jockey Journal Forum (Phase 0プレースホルダ)",
+      "lang": "en",
+      "type": "forum"
+    }
+  ],
+  "confidence": "low"
+}
