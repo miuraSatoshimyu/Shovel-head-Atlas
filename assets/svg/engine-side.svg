@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="engine-side-title engine-side-desc">
+  <title id="engine-side-title">ショベルヘッドエンジン側面図</title>
+  <desc id="engine-side-desc">1966-1984 ショベルヘッドエンジンの模式的側面図。系統ごとにクリック可能。左が前方(車体前側)、右が後方(トランスミッション側)。</desc>
+
+  <defs>
+    <linearGradient id="fin-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5f5f5"/>
+      <stop offset="1" stop-color="#cfcfcf"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="#fafafa"/>
+
+  <!-- Reference axis label -->
+  <text x="10" y="490" font-size="11" fill="#888" font-family="sans-serif">← 前方 (Front)   |   後方 (Rear) →</text>
+
+  <!-- ========== BOTTOM-END (crankcase, flywheel) ========== -->
+  <g class="system-group" data-system="bottom-end" role="button" tabindex="0" aria-label="ボトムエンド (クランクケース・フライホイール)">
+    <!-- crankcase silhouette -->
+    <path d="M 200 320 Q 200 240 300 240 L 500 240 Q 600 240 600 320 L 600 400 Q 600 430 570 430 L 230 430 Q 200 430 200 400 Z" fill="var(--sys-bottom-end)" stroke="#333" stroke-width="2"/>
+    <!-- flywheel circle hint -->
+    <circle cx="400" cy="340" r="55" fill="none" stroke="#555" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="400" y="345" text-anchor="middle" font-size="14" fill="#222" font-family="sans-serif" font-weight="600">ボトムエンド</text>
+    <text x="400" y="362" text-anchor="middle" font-size="10" fill="#444" font-family="sans-serif">bottom-end</text>
+  </g>
+
+  <!-- ========== TOP-END (heads + cylinders in V) ========== -->
+  <g class="system-group" data-system="top-end" role="button" tabindex="0" aria-label="トップエンド (ヘッド・シリンダー・ピストン)">
+    <!-- Front cylinder (tilted forward, left side) -->
+    <g transform="translate(310 240) rotate(-25)">
+      <rect x="-45" y="-190" width="90" height="190" fill="url(#fin-grad)" stroke="#333" stroke-width="2"/>
+      <!-- fins -->
+      <line x1="-45" y1="-40" x2="45" y2="-40" stroke="#888" stroke-width="1"/>
+      <line x1="-45" y1="-70" x2="45" y2="-70" stroke="#888" stroke-width="1"/>
+      <line x1="-45" y1="-100" x2="45" y2="-100" stroke="#888" stroke-width="1"/>
+      <line x1="-45" y1="-130" x2="45" y2="-130" stroke="#888" stroke-width="1"/>
+      <line x1="-45" y1="-160" x2="45" y2="-160" stroke="#888" stroke-width="1"/>
+      <!-- head (top rectangle bulged - shovel shape) -->
+      <path d="M -55 -190 L 55 -190 L 60 -220 L -60 -220 Z" fill="var(--sys-top-end)" stroke="#333" stroke-width="2"/>
+    </g>
+    <!-- Rear cylinder (tilted backward, right side) -->
+    <g transform="translate(490 240) rotate(25)">
+      <rect x="-45" y="-190" width="90" height="190" fill="url(#fin-grad)" stroke="#333" stroke-width="2"/>
+      <line x1="-45" y1="-40" x2="45" y2="-40" stroke="#888" stroke-width="1"/>
+      <line x1="-45" y1="-70" x2="45" y2="-70" stroke="#888" stroke-width="1"/>
+      <line x1="-45" y1="-100" x2="45" y2="-100" stroke="#888" stroke-width="1"/>
+      <line x1="-45" y1="-130" x2="45" y2="-130" stroke="#888" stroke-width="1"/>
+      <line x1="-45" y1="-160" x2="45" y2="-160" stroke="#888" stroke-width="1"/>
+      <path d="M -55 -190 L 55 -190 L 60 -220 L -60 -220 Z" fill="var(--sys-top-end)" stroke="#333" stroke-width="2"/>
+    </g>
+    <text x="400" y="120" text-anchor="middle" font-size="14" fill="#222" font-family="sans-serif" font-weight="600">トップエンド</text>
+    <text x="400" y="136" text-anchor="middle" font-size="10" fill="#444" font-family="sans-serif">top-end</text>
+  </g>
+
+  <!-- ========== CAM-DRIVE (cam cover on right side of case) ========== -->
+  <g class="system-group" data-system="cam-drive" role="button" tabindex="0" aria-label="カムドライブ (カム・カムカバー・タペット・プッシュロッド)">
+    <circle cx="600" cy="345" r="55" fill="var(--sys-cam-drive)" stroke="#333" stroke-width="2"/>
+    <!-- cam gear hint -->
+    <circle cx="600" cy="345" r="30" fill="none" stroke="#555" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <text x="600" y="342" text-anchor="middle" font-size="12" fill="#222" font-family="sans-serif" font-weight="600">カム</text>
+    <text x="600" y="358" text-anchor="middle" font-size="10" fill="#444" font-family="sans-serif">cam-drive</text>
+  </g>
+
+  <!-- ========== LUBRICATION (oil pump + oil tank) ========== -->
+  <g class="system-group" data-system="lubrication" role="button" tabindex="0" aria-label="潤滑系統 (オイルポンプ・オイルライン・ブリーザー)">
+    <!-- oil pump (attached to right side of crankcase, under cam) -->
+    <rect x="640" y="380" width="60" height="55" rx="6" fill="var(--sys-lubrication)" stroke="#333" stroke-width="2"/>
+    <text x="670" y="402" text-anchor="middle" font-size="10" fill="#222" font-family="sans-serif" font-weight="600">オイル</text>
+    <text x="670" y="416" text-anchor="middle" font-size="10" fill="#222" font-family="sans-serif" font-weight="600">ポンプ</text>
+    <text x="670" y="430" text-anchor="middle" font-size="8" fill="#444" font-family="sans-serif">lubrication</text>
+    <!-- oil line hint -->
+    <path d="M 640 405 Q 620 405 610 380" fill="none" stroke="var(--sys-lubrication)" stroke-width="3"/>
+  </g>
+
+  <!-- ========== CARBURETOR (between cylinders / V) ========== -->
+  <g class="system-group" data-system="carburetor" role="button" tabindex="0" aria-label="キャブレター (ケーヒン/S&amp;S/ベンディックス等)">
+    <!-- carb bell in the V -->
+    <path d="M 380 155 L 420 155 L 435 130 L 365 130 Z" fill="var(--sys-carburetor)" stroke="#333" stroke-width="2"/>
+    <ellipse cx="400" cy="125" rx="40" ry="12" fill="var(--sys-carburetor)" stroke="#333" stroke-width="2"/>
+    <text x="400" y="180" text-anchor="middle" font-size="11" fill="#222" font-family="sans-serif" font-weight="600">キャブ</text>
+  </g>
+
+  <!-- ========== IGNITION (timer cover front, generator/alternator area) ========== -->
+  <g class="system-group" data-system="ignition" role="button" tabindex="0" aria-label="点火系 (ポイント/電子進角・ジェネレーター/アルタネーター)">
+    <!-- timer cover on right front of case -->
+    <circle cx="200" cy="345" r="40" fill="var(--sys-ignition)" stroke="#333" stroke-width="2"/>
+    <text x="200" y="345" text-anchor="middle" font-size="11" fill="#222" font-family="sans-serif" font-weight="600">点火</text>
+    <text x="200" y="360" text-anchor="middle" font-size="9" fill="#444" font-family="sans-serif">ignition</text>
+  </g>
+
+  <!-- Legend / Year hint -->
+  <text x="790" y="20" text-anchor="end" font-size="10" fill="#666" font-family="sans-serif">Shovelhead 1966–1984</text>
+</svg>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="lube-title lube-desc">
+  <title id="lube-title">潤滑系統分解図 (プレースホルダ)</title>
+  <desc id="lube-desc">オイルポンプボディ・カバー・ブリーザーバルブの位置関係を示す模式図。Phase 1で本編の分解図に置換予定。</desc>
+
+  <rect width="600" height="400" fill="#fafafa"/>
+
+  <text x="300" y="30" text-anchor="middle" font-size="16" fill="#222" font-family="sans-serif" font-weight="700">潤滑系統 (lubrication)</text>
+  <text x="300" y="50" text-anchor="middle" font-size="11" fill="#666" font-family="sans-serif">Phase 0: 模式配置 / Phase 1 で本編置換</text>
+
+  <!-- Oil Pump Body -->
+  <g class="part-group" data-part-id="oil-pump-body" role="button" tabindex="0" aria-label="オイルポンプボディ">
+    <rect x="90" y="130" width="160" height="180" rx="10" fill="var(--sys-lubrication)" stroke="#333" stroke-width="2"/>
+    <!-- feed / scavenge chambers hint -->
+    <circle cx="150" cy="200" r="25" fill="none" stroke="#333" stroke-width="1.5"/>
+    <circle cx="200" cy="240" r="25" fill="none" stroke="#333" stroke-width="1.5"/>
+    <text x="170" y="330" text-anchor="middle" font-size="13" fill="#222" font-family="sans-serif" font-weight="600">オイルポンプボディ</text>
+    <text x="170" y="346" text-anchor="middle" font-size="10" fill="#555" font-family="sans-serif">Oil Pump Body</text>
+  </g>
+
+  <!-- Oil Pump Cover -->
+  <g class="part-group" data-part-id="oil-pump-cover" role="button" tabindex="0" aria-label="オイルポンプカバー">
+    <path d="M 260 130 L 380 130 L 400 150 L 400 290 L 380 310 L 260 310 Z" fill="var(--sys-lubrication)" stroke="#333" stroke-width="2" opacity="0.85"/>
+    <text x="330" y="220" text-anchor="middle" font-size="13" fill="#222" font-family="sans-serif" font-weight="600">オイルポンプ</text>
+    <text x="330" y="238" text-anchor="middle" font-size="13" fill="#222" font-family="sans-serif" font-weight="600">カバー</text>
+    <text x="330" y="256" text-anchor="middle" font-size="10" fill="#555" font-family="sans-serif">Oil Pump Cover</text>
+  </g>
+
+  <!-- Breather Valve -->
+  <g class="part-group" data-part-id="breather-valve" role="button" tabindex="0" aria-label="ブリーザーバルブ">
+    <circle cx="490" cy="220" r="55" fill="var(--sys-lubrication)" stroke="#333" stroke-width="2" opacity="0.7"/>
+    <!-- rotary valve slits -->
+    <line x1="490" y1="170" x2="490" y2="270" stroke="#333" stroke-width="1.5"/>
+    <line x1="440" y1="220" x2="540" y2="220" stroke="#333" stroke-width="1.5"/>
+    <text x="490" y="300" text-anchor="middle" font-size="13" fill="#222" font-family="sans-serif" font-weight="600">ブリーザーバルブ</text>
+    <text x="490" y="316" text-anchor="middle" font-size="10" fill="#555" font-family="sans-serif">Breather Valve</text>
+  </g>
+
+  <text x="300" y="380" text-anchor="middle" font-size="10" fill="#888" font-family="sans-serif">クリックで詳細 · 戻る: ←/#/lubrication ではなく側面図に戻るには「エンジン全体」リンク</text>
+</svg>
