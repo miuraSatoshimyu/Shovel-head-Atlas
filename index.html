@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shovel-head Atlas</title>
+  <meta name="description" content="ショベルヘッドエンジン(1966-1984)のインタラクティブ図解 × 知識集約サイト">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="#/" class="home-link">Shovel-head Atlas</a></h1>
+    <p class="tagline">ショベルヘッド (1966–1984) パーツ図鑑</p>
+  </header>
+
+  <main class="layout">
+    <section id="viewer" aria-label="エンジン図"></section>
+
+    <aside id="detail-panel" aria-label="パーツ詳細" data-open="false">
+      <button type="button" class="panel-close" aria-label="閉じる">×</button>
+      <div class="panel-inner">
+        <p class="panel-empty">系統またはパーツをクリックすると詳細が表示されます。</p>
+      </div>
+    </aside>
+  </main>
+
+  <template id="part-card">
+    <article class="part-card">
+      <header class="part-header">
+        <h2 class="part-name-ja"></h2>
+        <p class="part-name-en"></p>
+        <p class="part-system"></p>
+      </header>
+
+      <section class="part-section">
+        <h3>年式バリアント</h3>
+        <table class="variants">
+          <thead>
+            <tr><th>年式</th><th>OEM番号</th><th>備考</th></tr>
+          </thead>
+          <tbody class="variants-body"></tbody>
+        </table>
+      </section>
+
+      <section class="part-section">
+        <h3>歴史・年式変遷</h3>
+        <p class="history"></p>
+      </section>
+
+      <section class="part-section">
+        <h3>故障傾向・持病</h3>
+        <ul class="failure-modes"></ul>
+      </section>
+
+      <section class="part-section">
+        <h3>パーツ入手性</h3>
+        <p class="availability"></p>
+      </section>
+
+      <section class="part-section">
+        <h3>リンク集</h3>
+        <ul class="links"></ul>
+      </section>
+
+      <p class="confidence-note"></p>
+    </article>
+  </template>
+
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
